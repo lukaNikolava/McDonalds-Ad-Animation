@@ -3,33 +3,51 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 .banner {
-    display: block; /* used javascript for resizing */
     position: relative;
     overflow: hidden;
+    height: 100vh;
+    width: 100vw;
 }
 
-.banner img {
+.banner > img {
     position: absolute;
     height: 100%;
     width: 100%;
 }
-.frame { 
-    opacity: 1; 
-    transform: scale(1.0); 
+
+.frame {
+    opacity: 1;
+    transform: scale(1);
+    height: 100%;
+    width: 100%;
 }
-.frame1 , .frame1Png {
+
+.frame1{
     z-index: 5;
     animation: frame1Transition 12s infinite;
 }
+.frame1Png {
+    z-index: 6;
+    animation: frame1Transition 12s infinite;
+}
 
-.frame2 , .frame2Png {
+.frame2 {
     z-index: 4;
+    animation: frame2Transition 12s infinite;
+} 
+.frame2png{
+    z-index: 6;
     animation: frame2Transition 12s infinite;
 }
 
-.frame3 , .frame3Png {
+.frame3{
     z-index: 3;
+    animation: frame3Transition 12s infinite;
+}
+.frame3png {
+    z-index: 6;
     animation: frame3Transition 12s infinite;
 }
 
@@ -38,23 +56,63 @@
     animation: frame4Transition 12s infinite;
 }
 
+.bigBangPng {
+    position: absolute;
+    top: 18%;
+    left: 0%;
+    transform: translateX(-50%);
+    z-index: 5;
+    width: 40%; 
+    height: auto; 
+    animation: bigBangPngZoomAnimation 12s infinite;
+}
+
+.burgerPrice {
+    position: absolute;
+    top: 37%;
+    left: 20%;
+    transform: translateX(-50%);
+    z-index: 5;
+    width: 35%; 
+    height: auto; 
+    animation: priceAnimation 12s infinite;
+}
+
 .bannerFooter {
+    position: absolute;
     bottom: 10px;
     z-index: 5;
 }
+
+
 @keyframes frame1Transition {
-    0%, 25% { transform: scale(1.0); opacity: 1; }
+    0%, 25% { transform: scale(1); opacity: 1; }
     28%, 100% { transform: scale(1.2); opacity: 0; }
 }
+
 @keyframes frame2Transition {
-    0%, 50% { transform: scale(1.0); opacity: 1; }
+    0%, 50% { transform: scale(1); opacity: 1; }
     54%, 100% { transform: scale(1.2); opacity: 0; }
 }
+
 @keyframes frame3Transition {
-    0%, 75% { transform: scale(1.0); opacity: 1; }
+    0%, 75% { transform: scale(1); opacity: 1; }
     79%, 100% { transform: scale(1.2); opacity: 0; }
 }
+
 @keyframes frame4Transition {
-    0%, 100% { transform: scale(1.0); opacity: 1; }
+    0%, 100% { transform: scale(1); opacity: 1; }
 }
 
+@keyframes bigBangPngZoomAnimation {
+    0%, 25% { transform: scale(1); opacity: 1; }
+    27%, 30% { transform: scale(1.1); opacity: 1; }
+    30%, 50% { transform: scale(1); opacity: 1; }
+    52%, 55% { transform: scale(1.1); opacity: 1; }
+    55%, 75% { transform: scale(1); opacity: 1; }
+    77%, 100% { transform: scale(1.1); opacity: 0; }
+}
+@keyframes priceAnimation {
+    0% , 75%{opacity: 1;}
+    77% , 100%{opacity: 0;}
+}
