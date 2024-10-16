@@ -118,7 +118,6 @@
     position: absolute;
     top: 68%;
     left: 45%;
-    transform: translateX(-50%);
     width: 35%; 
     height: auto; 
     opacity: 0;
@@ -131,7 +130,6 @@
     position: absolute;
     top: 25%;
     left: 80%;
-    transform: translateX(-50%);
     width: 35%; 
     height: auto; 
 
@@ -142,7 +140,6 @@
     position: absolute;
     top: 24%;
     left: 80%;
-    transform: translateX(-50%);
     width: 40%; 
     height: auto; 
 
@@ -153,7 +150,6 @@
     position: absolute;
     top: 22%;
     left: 80%;
-    transform: translateX(-50%);
     width: 45%; 
     height: auto; 
 
@@ -164,14 +160,29 @@
     position: absolute;
     top: 22%;
     left: 80%;
-    transform: translateX(-50%);
     width: 45%; 
     height: auto; 
 
     animation: stripeGreenAnimation 12s infinite;
     z-index: 5;
 }
+.outroText{
+    position: absolute;
+    width: 100%; 
+    height: auto; 
 
+    animation: outroTextAnimation 12s infinite;
+    z-index: 5;
+}
+.outroButton{
+    position: absolute;
+    width: 100%; 
+    height: auto; 
+    animation: outroTextAnimation 12s infinite,
+                pulsarAnimation 1s infinite;
+
+    z-index: 5;
+}
 
 @keyframes frame1Transition {
     0%, 25% { transform: scale(1); opacity: 1; }
@@ -264,4 +275,17 @@
     57%,57%{opacity: 0; transform: translateX(-75%);}
     59% , 78% {opacity: 1; transform: translateX(-50%);}
     79%, 100%{opacity: 0; transform: translateX(0%);}
+}
+@keyframes outroTextAnimation {
+    0% , 78% {opacity: 0; transform: scale(.5);}
+    80% , 98% {opacity: 1;transform: scale(1.0);}
+    99% , 100%{opacity: 0;}
+}
+@keyframes pulsarAnimation {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
 }
