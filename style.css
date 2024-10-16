@@ -127,6 +127,51 @@
     z-index: 6;
 }
 
+.stripeRed{
+    position: absolute;
+    top: 25%;
+    left: 80%;
+    transform: translateX(-50%);
+    width: 35%; 
+    height: auto; 
+
+    animation: stripeRedAnimation 12s infinite;
+    z-index: 5;
+}
+.stripeBlue{
+    position: absolute;
+    top: 24%;
+    left: 80%;
+    transform: translateX(-50%);
+    width: 40%; 
+    height: auto; 
+
+    animation: stripeBlueAnimation 12s infinite;
+    z-index: 5;
+}
+.stripeYellow{
+    position: absolute;
+    top: 22%;
+    left: 80%;
+    transform: translateX(-50%);
+    width: 45%; 
+    height: auto; 
+
+    animation: stripeYellowAnimation 12s infinite;
+    z-index: 5;
+}
+.stripeGreen{
+    position: absolute;
+    top: 22%;
+    left: 80%;
+    transform: translateX(-50%);
+    width: 45%; 
+    height: auto; 
+
+    animation: stripeGreenAnimation 12s infinite;
+    z-index: 5;
+}
+
 
 @keyframes frame1Transition {
     0%, 25% { transform: scale(1); opacity: 1; }
@@ -175,4 +220,48 @@
     0% , 57% {opacity: 0; transform: translateY(10px);}
     59% , 75% {opacity: 1;transform: translateY(0px);}
     77% , 100% {opacity: 0;}
+}
+@keyframes stripeRedAnimation {
+    0% , 2% {opacity: 0; transform: translateX(-75%);}
+    5% , 25% {opacity: 1; transform: translateX(-50%);}
+    27% , 28% {opacity: 0; transform: translateX(0%);}
+    29% ,30% {opacity: 0; transform: translateX(-75%);}
+    32% , 48% {opacity: 1; transform: translateX(-50%);}
+    50%,53%{opacity: 0; transform: translateX(0%);}
+    53%,54%{opacity: 0; transform: translateX(-75%);}
+    56% , 75% {opacity: 1; transform: translateX(-50%);}
+    76%, 100%{opacity: 0; transform: translateX(0%);}
+}
+@keyframes stripeBlueAnimation {
+    0% , 3% {opacity: 0; transform: translateX(-75%);}
+    6% , 26% {opacity: 1; transform: translateX(-50%);}
+    28% , 29% {opacity: 0; transform: translateX(0%);}
+    30% ,31% {opacity: 0; transform: translateX(-75%);}
+    33% , 49% {opacity: 1; transform: translateX(-50%);}
+    51%,54%{opacity: 0; transform: translateX(0%);}
+    54%,55%{opacity: 0; transform: translateX(-75%);}
+    57% , 76% {opacity: 1; transform: translateX(-50%);}
+    77%, 100%{opacity: 0; transform: translateX(0%);}
+}
+@keyframes stripeYellowAnimation {
+    0% , 4% {opacity: 0; transform: translateX(-75%);}
+    7% , 27% {opacity: 1; transform: translateX(-50%);}
+    29% , 30% {opacity: 0; transform: translateX(0%);}
+    31% ,32% {opacity: 0; transform: translateX(-75%);}
+    34% , 50% {opacity: 1; transform: translateX(-50%);}
+    52%,55%{opacity: 0; transform: translateX(0%);}
+    55%,56%{opacity: 0; transform: translateX(-75%);}
+    58% , 77% {opacity: 1; transform: translateX(-50%);}
+    78%, 100%{opacity: 0; transform: translateX(0%);}
+}
+@keyframes stripeGreenAnimation {
+    0% , 5% {opacity: 0; transform: translateX(-75%);}
+    8% , 28% {opacity: 1; transform: translateX(-50%);}
+    30% , 31% {opacity: 0; transform: translateX(0%);}
+    32% ,33% {opacity: 0; transform: translateX(-75%);}
+    35% , 51% {opacity: 1; transform: translateX(-50%);}
+    53%,56%{opacity: 0; transform: translateX(0%);}
+    57%,57%{opacity: 0; transform: translateX(-75%);}
+    59% , 78% {opacity: 1; transform: translateX(-50%);}
+    79%, 100%{opacity: 0; transform: translateX(0%);}
 }
