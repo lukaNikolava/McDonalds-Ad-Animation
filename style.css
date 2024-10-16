@@ -88,6 +88,45 @@
     z-index: 5;
 }
 
+.chickenPaprikaLayer{
+    position: absolute;
+    top: 68%;
+    left: 45%;
+    transform: translateX(-50%);
+    width: 35%; 
+    height: auto; 
+    opacity: 1;
+    animation: chickenPaprikaLayerAnimation 12s infinite;
+
+    z-index: 6;
+}
+
+.doubleCheesburgerLayer{
+    position: absolute;
+    top: 68%;
+    left: 45%;
+    transform: translateX(-50%);
+    width: 35%; 
+    height: auto; 
+    opacity: 0;
+    animation: doubleCheesburgerLayerAnimation 12s infinite;
+
+    z-index: 6;
+}
+
+.filetOfFishLayer{
+    position: absolute;
+    top: 68%;
+    left: 45%;
+    transform: translateX(-50%);
+    width: 35%; 
+    height: auto; 
+    opacity: 0;
+    animation: filetOfFishLayerAnimation 12s infinite ;
+
+    z-index: 6;
+}
+
 
 @keyframes frame1Transition {
     0%, 25% { transform: scale(1); opacity: 1; }
@@ -113,12 +152,27 @@
 @keyframes bigBangPngZoomAnimation {
     0%, 25% { transform: scale(1); opacity: 1; }
     27%, 30% { transform: scale(1.1); opacity: 1; }
-    30%, 50% { transform: scale(1); opacity: 1;}
-    52%, 55% { transform: scale(1.1); opacity: 1;}
-    55%, 75% { transform: scale(1); opacity: 1;}
+    30%, 48% { transform: scale(1); opacity: 1;}
+    49%, 53% { transform: scale(1.1); opacity: 1;}
+    53%, 75% { transform: scale(1); opacity: 1;}
     77%, 100% { transform: scale(1.1); opacity: 0;}
 }
 @keyframes priceAnimation {
     0% , 75%{opacity: 1;}
     77% , 100%{opacity: 0;}
+}
+@keyframes chickenPaprikaLayerAnimation {
+    0% , 6% {opacity: 0; transform: translateY(10px);}
+    8% , 25% {opacity: 1;transform: translateY(0px);}
+    27% , 100% {opacity: 0;}
+}
+@keyframes doubleCheesburgerLayerAnimation {
+    0% , 33% {opacity: 0; transform: translateY(10px);}
+    35% , 49% {opacity: 1;transform: translateY(0px);}
+    50% , 100% {opacity: 0;}
+}
+@keyframes filetOfFishLayerAnimation {
+    0% , 57% {opacity: 0; transform: translateY(10px);}
+    59% , 75% {opacity: 1;transform: translateY(0px);}
+    77% , 100% {opacity: 0;}
 }
