@@ -20,6 +20,5 @@ function adjustBannerSize() {
     }
 }
 
-
 window.addEventListener('load', adjustBannerSize);
 window.addEventListener('resize', adjustBannerSize);
